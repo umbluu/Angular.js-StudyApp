@@ -1,17 +1,36 @@
-<section class="section mt-5">
-		<div class="container">
-		  <div class="row">
+<section class="section mt-5" ng-controller="todoCtrl">
+	<div class="container">
+		<div class="row">
 			<div class="col-md-6">
-			  <div>
-				<img alt="AngularJS" class="img-fluid" src="images/angularjs.jpg" />
-			  </div>
+				<div>
+					<img alt="AngularJS" class="img-fluid" src="images/290.png" />
+				</div>
 			</div>
 			<div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
-			  <div>
-				<h2>Todo List</h2>
-				<p class="margin-top-s"> </p>
-			  </div>
+				<div>
+					<h2>Todo List</h2>
+					<p class="margin-top-s">ToDo Listi abil saad lisada endale märkmeid, et tähtsad asjad meelest ei läheks. Järgnev Todo List on ehitatud AngularJS raamistikuga.</p>
+					<hr>
+					<div class="todo mt-5">
+							<input ng-model="todoText" placeholder="Tegevuse kirjeldus" size="30" type="text" /> 
+							
+							<a href="" class="btn-green btn-lg" ng-click="addTodo()">Lisa</a>
+							<ul class="unstyled my-5 mb-1">
+								<li ng-repeat="todo in todos">
+									<!-- <input ng-model="todo.done" type="checkbox" />  -->
+									<input ng-model="todo.done" type="checkbox" class="option-input checkbox" />
+									<span class="done-{{todo.done}}">{{todo.text}}</span>
+								</li>
+							</ul>
+							<hr>
+							<span>{{remaining()}} / {{todos.length}} on tegemata</span> 
+							<a href="" class="btn-red btn-lg" ng-click="archive()">Arhiveeri</a>
+					</div>
+					
+				</div>
+				
 			</div>
-		  </div>
 		</div>
-	  </section>
+	</div>
+</section>
+
