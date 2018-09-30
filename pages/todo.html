@@ -1,36 +1,34 @@
 <section class="section mt-5" ng-controller="todoCtrl">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-5">
 				<div>
 					<img alt="AngularJS" class="img-fluid" src="images/290.png" />
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
-				<div>
+			<div class="col-lg-6 col-md-12 col-sm-12 col-12 ml-auto d-flex align-items-center mt-4 mt-md-0">
+				<div class="mb-5">
 					<h2>Todo List</h2>
-					<p class="margin-top-s">ToDo Listi abil saad lisada endale märkmeid, et tähtsad asjad meelest ei läheks. Järgnev Todo List on ehitatud AngularJS raamistikuga.</p>
+					<p class="margin-top-s">ToDo Listi abil saad lisada endale märkmeid, et tähtsad asjad meelest ei läheks. Järgnev
+						Todo List on ehitatud AngularJS raamistikuga.</p>
 					<hr>
 					<div class="todo mt-5">
-							<input ng-model="todoText" placeholder="Tegevuse kirjeldus" size="30" type="text" /> 
-							
-							<a href="" class="btn-green btn-lg" ng-click="addTodo()">Lisa</a>
-							<ul class="unstyled my-5 mb-1">
-								<li ng-repeat="todo in todos">
-									<!-- <input ng-model="todo.done" type="checkbox" />  -->
-									<input ng-model="todo.done" type="checkbox" class="option-input checkbox" />
-									<span class="done-{{todo.done}}">{{todo.text}}</span>
-								</li>
-							</ul>
-							<hr>
-							<span>{{remaining()}} / {{todos.length}} on tegemata</span> 
-							<a href="" class="btn-red btn-lg" ng-click="archive()">Arhiveeri</a>
+						<input ng-model="todoText" placeholder="Tegevuse kirjeldus" type="text" />
+
+						<a href="" class="btn-green btn-lg" ng-click="addTodo()">Lisa</a>
+						<ul class="unstyled my-5 mb-1">
+							<li ng-repeat="todo in todos">
+								<!-- <input ng-model="todo.done" type="checkbox" />  -->
+								<input ng-model="todo.done" type="checkbox" class="option-input checkbox" />
+								<span class="done-{{todo.done}}">{{todo.text}}</span>
+							</li>
+						</ul>
+						<hr>
+						<span>{{remaining()}} / {{todos.length}} on tegemata</span>
+						<a href="" class="btn-red btn-lg" ng-click="archive()">Arhiveeri</a>
 					</div>
-					
 				</div>
-				
 			</div>
 		</div>
 	</div>
 </section>
-
