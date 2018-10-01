@@ -92,15 +92,22 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .btn-green {
   cursor:pointer;  
   background-color: #2ed573;
+  outline: none!important;
+  border: none;
   border-radius: 100px!important;
   color: #ffffff;
   margin: 0;
+}
+
+.btn-example {
+  margin-left: 5px;
 }
 
 .btn-red {
   cursor:pointer;  
   background-color: #ff4757;
   border-radius: 100px!important;
+  border: none;
   color: #ffffff;
   margin: 0;
 }
@@ -196,6 +203,48 @@ input {
   border-right: 0;
   background: transparent;
   outline: none;
+}
+
+/* Example tabs */
+
+.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.tabs li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background: #f6f6f6;
+  color: #999;
+  margin: 0px 3px;
+  font-size: 1.3em;
+}
+
+.tabs li:hover {
+  background: #fff;
+  color: #000;
+}
+
+.tabs li.active {
+  color: #000;
+  background: #f5f6fa;
+  cursor: auto;
+}
+
+.tabs li:first-child {
+  margin-left: 0px;
+}
+
+.tabs-data {
+  background: #f5f6fa;
+  padding: 15px;
+}
+
+.tabs-data h1 {
+  font-size: 1.6em;
 }
 
 

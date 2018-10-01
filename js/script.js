@@ -40,6 +40,8 @@ scotchApp.config(function ($routeProvider) {
       templateUrl: 'pages/feedback.html',
       controller: 'feedbackController'
     });
+
+
 });
 
 // create the controller and inject Angular's $scope
@@ -103,4 +105,31 @@ scotchApp.controller('todoCtrl', function ($scope) {
       if (!todo.done) $scope.todos.push(todo);
     });
   };
+});
+
+scotchApp.controller('tabsController', function($scope){
+	$scope.tabs = [
+	{
+		name: 'Intro',
+		url: 'tabs-data/angular.html',
+		active1: true
+	},{
+		name: 'Modules',
+		url: 'tabs-data/modules.html',
+		active1: false
+	},{
+		name: 'Data Binding',
+		url: 'tabs-data/data-binding.html',
+		active1: false
+	}
+	];
+	
+	
+	$scope.tab = 'tabs-data/angular.html'; /*default tab*/
+	$scope.current = 'Angular'; /*default active tab*/
+	
+	$scope.toggleTab = function(s){
+		$scope.tab = s.url;  /*tab changed*/
+		$scope.current = s.name; /* changing value of current*/
+	};
 });
