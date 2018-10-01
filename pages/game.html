@@ -1,0 +1,26 @@
+<section class="section mt-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 ml-auto d-flex align-items-center mt-4 mt-md-0">
+                <div>
+                    <h2>Ussimäng</h2>
+                    <p class="margin-top-s">Mängimiseks kasuta nooleklahve (üles-alla-vasak-parem) </p>
+                    <p class="margin-top-s">Mäng toimib hetkel desktop platvormil. </p>
+                    <p class="margin-top-s">Alustamiseks vajuta nuppu "Start"</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 ml-auto d-flex align-items-center mt-4 mt-md-0">
+                <div id="gameContainer" ng-controller="snakeCtrl">
+                    <h3>Skoor: {{score}}</h3>
+                    <div>
+                        <div class="row-snake" ng-repeat="column in board">
+                            <div class="column" ng-style="{'background-color': setStyling($parent.$index, $index)}"
+                                ng-repeat="row in column track by $index"></div>
+                        </div>
+                    </div>
+                    <div id="startGame" ng-click="startGame()">Start</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

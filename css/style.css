@@ -247,6 +247,42 @@ input {
   font-size: 1.6em;
 }
 
+/* Game */
+
+#gameContainer, #pastScores {
+	width: 600px;
+	float: left;
+}
+
+.row-snake {
+	height: 26px;
+}
+
+.column {
+	border: 1px solid white;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+
+#startGame {
+	width: 120px;
+	padding: 10px;
+  margin-top: 35px;
+  text-align: center;
+  border-radius: 100px;
+	background-color: #ff4757;
+	color: white;
+}
+
+#startGame:hover {
+  color: red;
+  background-color: transparent;
+  border: 1px solid #ff4757;
+  transition: .4s;
+	cursor: pointer;
+}
+
 
 
 
